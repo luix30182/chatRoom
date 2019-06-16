@@ -6,10 +6,7 @@ const server = app.listen(3000, function() {
 });
 
 const io = require('socket.io')(server);
-io.configure(function () { 
-    io.set("transports", ["xhr-polling"]); 
-    io.set("polling duration", 10); 
-}); 
+
 
 io.on('connection', function(socket) {
     console.log(socket.id)
