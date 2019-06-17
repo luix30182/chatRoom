@@ -14,3 +14,5 @@ io.on('connection', function(socket) {
         io.emit('MESSAGE', data);
     })
 });
+
+setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
